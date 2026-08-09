@@ -9,7 +9,7 @@
     <title>شرکت کسری دژ ارجان | راه و ابنیه</title>
 
     <meta name="description"
-        content="شرکت کسری دژ ارجان، فعال در حوزه راه و ابنیه و اجرای پروژه‌های عمرانی با رویکرد حرفه‌ای و کیفیت‌محور.">
+        content="شرکت کسری دژ ارجان، فعال در حوزه راه، ابنیه و پروژه‌های عمرانی با رویکرد حرفه‌ای و کیفیت‌محور.">
 
     <meta name="theme-color" content="#071426">
 
@@ -20,6 +20,7 @@
         rel="stylesheet">
 
     <style>
+
         :root {
             --navy: #071426;
             --navy-2: #0b1d35;
@@ -73,7 +74,7 @@
             left: 0;
             z-index: 1000;
 
-            background: rgba(7, 20, 38, .78);
+            background: rgba(7, 20, 38, .88);
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
 
@@ -87,13 +88,14 @@
             align-items: center;
             justify-content: space-between;
 
-            gap: 30px;
+            gap: 25px;
         }
 
         .brand {
             display: flex;
             align-items: center;
             gap: 13px;
+
             white-space: nowrap;
         }
 
@@ -113,6 +115,9 @@
             border-radius: 12px;
 
             background: rgba(201, 164, 92, .08);
+
+            box-shadow:
+                0 0 25px rgba(201, 164, 92, .08);
         }
 
         .brand-text strong {
@@ -127,22 +132,24 @@
             display: block;
 
             color: #9daabd;
-            font-size: 10px;
+            font-size: 9px;
             letter-spacing: 1px;
         }
 
         nav {
             display: flex;
             align-items: center;
-            gap: 7px;
+            gap: 5px;
         }
 
         nav a {
             color: #dfe6ef;
+
             font-size: 13px;
             font-weight: 500;
 
-            padding: 10px 14px;
+            padding: 9px 12px;
+
             border-radius: 8px;
 
             transition: .25s ease;
@@ -151,12 +158,20 @@
         nav a:hover,
         nav a.active {
             color: var(--gold-light);
+
             background: rgba(201, 164, 92, .09);
         }
 
         .nav-cta {
             border: 1px solid rgba(201, 164, 92, .55);
+
             color: var(--gold-light) !important;
+
+            margin-right: 5px;
+        }
+
+        .nav-cta:hover {
+            background: rgba(201, 164, 92, .15);
         }
 
         /* ================= HERO ================= */
@@ -171,9 +186,24 @@
             align-items: center;
 
             background:
-                radial-gradient(circle at 15% 25%, rgba(201, 164, 92, .16), transparent 30%),
-                radial-gradient(circle at 85% 80%, rgba(29, 73, 120, .25), transparent 35%),
-                linear-gradient(125deg, #050e1b 0%, #091a30 55%, #102947 100%);
+                radial-gradient(
+                    circle at 15% 25%,
+                    rgba(201, 164, 92, .16),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 85% 80%,
+                    rgba(29, 73, 120, .25),
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    125deg,
+                    #050e1b 0%,
+                    #091a30 55%,
+                    #102947 100%
+                );
         }
 
         .hero::before {
@@ -185,12 +215,24 @@
             opacity: .08;
 
             background-image:
-                linear-gradient(rgba(255,255,255,.8) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,.8) 1px, transparent 1px);
+                linear-gradient(
+                    rgba(255,255,255,.8) 1px,
+                    transparent 1px
+                ),
+
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,.8) 1px,
+                    transparent 1px
+                );
 
             background-size: 55px 55px;
 
-            transform: perspective(500px) rotateX(55deg) scale(1.5);
+            transform:
+                perspective(500px)
+                rotateX(55deg)
+                scale(1.5);
+
             transform-origin: bottom;
         }
 
@@ -198,6 +240,7 @@
             content: "";
 
             position: absolute;
+
             width: 520px;
             height: 520px;
 
@@ -213,7 +256,7 @@
             position: relative;
             z-index: 2;
 
-            max-width: 760px;
+            max-width: 780px;
 
             padding-top: 80px;
 
@@ -222,7 +265,9 @@
 
         .eyebrow {
             display: inline-flex;
+
             align-items: center;
+
             gap: 10px;
 
             color: var(--gold-light);
@@ -246,6 +291,7 @@
             color: white;
 
             font-size: clamp(42px, 6vw, 76px);
+
             line-height: 1.25;
 
             font-weight: 900;
@@ -263,6 +309,7 @@
             color: #b8c3d2;
 
             font-size: 17px;
+
             line-height: 2.2;
 
             margin-bottom: 34px;
@@ -270,12 +317,15 @@
 
         .hero-actions {
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 13px;
         }
 
         .btn {
             display: inline-flex;
+
             align-items: center;
             justify-content: center;
 
@@ -286,6 +336,7 @@
             border-radius: 8px;
 
             font-size: 13px;
+
             font-weight: 700;
 
             transition: .3s ease;
@@ -294,47 +345,60 @@
         .btn-gold {
             color: #101a29;
 
-            background: linear-gradient(
-                135deg,
-                var(--gold-light),
-                var(--gold)
-            );
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--gold-light),
+                    var(--gold)
+                );
 
-            box-shadow: 0 12px 30px rgba(201, 164, 92, .18);
+            box-shadow:
+                0 12px 30px rgba(201, 164, 92, .18);
         }
 
         .btn-gold:hover {
             transform: translateY(-3px);
-            box-shadow: 0 18px 35px rgba(201, 164, 92, .27);
+
+            box-shadow:
+                0 18px 35px rgba(201, 164, 92, .27);
         }
 
         .btn-outline {
             color: white;
 
             border: 1px solid rgba(255,255,255,.22);
+
             background: rgba(255,255,255,.04);
         }
 
         .btn-outline:hover {
             border-color: var(--gold);
+
             color: var(--gold-light);
         }
+
+        /* ================= TRUST ================= */
 
         .hero-trust {
             margin-top: 58px;
 
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 35px;
         }
 
         .trust-item {
-            border-right: 1px solid rgba(255,255,255,.12);
+            border-right:
+                1px solid rgba(255,255,255,.12);
+
             padding-right: 20px;
         }
 
         .trust-item:first-child {
             border-right: none;
+
             padding-right: 0;
         }
 
@@ -344,11 +408,13 @@
             color: var(--gold-light);
 
             font-size: 24px;
+
             font-weight: 800;
         }
 
         .trust-item span {
             color: #8997aa;
+
             font-size: 11px;
         }
 
@@ -370,13 +436,18 @@
 
         .intro {
             padding: 105px 0;
+
             background: white;
         }
 
         .intro-grid {
             display: grid;
-            grid-template-columns: 1fr 1.35fr;
+
+            grid-template-columns:
+                1fr 1.35fr;
+
             gap: 80px;
+
             align-items: center;
         }
 
@@ -384,6 +455,7 @@
             color: var(--gold-dark);
 
             font-size: 12px;
+
             font-weight: 800;
 
             letter-spacing: .5px;
@@ -394,7 +466,9 @@
         .section-title {
             color: var(--navy);
 
-            font-size: clamp(30px, 4vw, 43px);
+            font-size:
+                clamp(30px, 4vw, 43px);
+
             line-height: 1.45;
 
             font-weight: 900;
@@ -410,6 +484,7 @@
             color: var(--muted);
 
             font-size: 15px;
+
             line-height: 2.25;
         }
 
@@ -417,25 +492,33 @@
             margin-top: 30px;
 
             display: inline-flex;
+
             align-items: center;
+
             gap: 12px;
 
             padding: 11px 16px;
 
             background: #faf7f0;
-            border: 1px solid #eadfc9;
+
+            border:
+                1px solid #eadfc9;
 
             border-radius: 8px;
 
             color: #725827;
 
             font-size: 12px;
+
             font-weight: 700;
         }
 
         .intro-cards {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
             gap: 16px;
         }
 
@@ -449,7 +532,9 @@
             border-radius: 14px;
 
             background: #fbfcfd;
-            border: 1px solid #e9edf2;
+
+            border:
+                1px solid #e9edf2;
 
             transition: .3s ease;
         }
@@ -457,15 +542,19 @@
         .intro-card:hover {
             transform: translateY(-5px);
 
-            border-color: rgba(201, 164, 92, .45);
+            border-color:
+                rgba(201, 164, 92, .45);
 
-            box-shadow: 0 20px 50px rgba(9, 26, 48, .08);
+            box-shadow:
+                0 20px 50px
+                rgba(9, 26, 48, .08);
         }
 
         .card-number {
             color: var(--gold);
 
             font-size: 12px;
+
             font-weight: 800;
         }
 
@@ -473,6 +562,7 @@
             color: var(--navy);
 
             font-size: 17px;
+
             margin: 14px 0 8px;
         }
 
@@ -480,6 +570,7 @@
             color: var(--muted);
 
             font-size: 12px;
+
             line-height: 2;
         }
 
@@ -493,18 +584,25 @@
 
         .section-head {
             text-align: center;
+
             max-width: 680px;
-            margin: 0 auto 50px;
+
+            margin:
+                0 auto 50px;
         }
 
         .section-head p {
             color: var(--muted);
+
             font-size: 14px;
         }
 
         .activity-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 20px;
         }
 
@@ -519,7 +617,9 @@
 
             background: white;
 
-            border: 1px solid #e8ebef;
+            border:
+                1px solid #e8ebef;
+
             border-radius: 14px;
 
             transition: .3s ease;
@@ -538,15 +638,19 @@
             left: -45px;
             bottom: -45px;
 
-            background: rgba(201,164,92,.08);
+            background:
+                rgba(201,164,92,.08);
         }
 
         .activity:hover {
             transform: translateY(-6px);
 
-            box-shadow: 0 22px 55px rgba(7, 20, 38, .08);
+            box-shadow:
+                0 22px 55px
+                rgba(7, 20, 38, .08);
 
-            border-color: rgba(201,164,92,.35);
+            border-color:
+                rgba(201,164,92,.35);
         }
 
         .activity-icon {
@@ -554,6 +658,7 @@
             height: 50px;
 
             display: grid;
+
             place-items: center;
 
             margin-bottom: 20px;
@@ -569,7 +674,9 @@
 
         .activity h3 {
             color: var(--navy);
+
             font-size: 18px;
+
             margin-bottom: 8px;
         }
 
@@ -577,6 +684,7 @@
             color: var(--muted);
 
             font-size: 12px;
+
             line-height: 2;
         }
 
@@ -586,13 +694,18 @@
             padding: 100px 0;
 
             background: var(--navy);
+
             color: white;
         }
 
         .company-grid {
             display: grid;
-            grid-template-columns: 1fr 1.4fr;
+
+            grid-template-columns:
+                1fr 1.4fr;
+
             gap: 70px;
+
             align-items: center;
         }
 
@@ -608,22 +721,38 @@
             color: #aab7c8;
 
             font-size: 14px;
+
             line-height: 2.2;
         }
 
         .company-info {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
             gap: 13px;
         }
 
         .info-box {
             padding: 25px;
 
-            border: 1px solid rgba(255,255,255,.1);
-            background: rgba(255,255,255,.035);
+            border:
+                1px solid rgba(255,255,255,.1);
+
+            background:
+                rgba(255,255,255,.035);
 
             border-radius: 12px;
+
+            transition: .3s ease;
+        }
+
+        .info-box:hover {
+            border-color:
+                rgba(201,164,92,.35);
+
+            transform: translateY(-3px);
         }
 
         .info-box small {
@@ -648,7 +777,12 @@
             padding: 90px 0;
 
             background:
-                radial-gradient(circle at 80% 50%, rgba(201,164,92,.11), transparent 30%),
+                radial-gradient(
+                    circle at 80% 50%,
+                    rgba(201,164,92,.11),
+                    transparent 30%
+                ),
+
                 #f7f7f6;
         }
 
@@ -656,22 +790,28 @@
             padding: 55px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
 
             gap: 40px;
 
             border-radius: 18px;
 
-            background: linear-gradient(
-                120deg,
-                #091a2e,
-                #102947
-            );
+            background:
+                linear-gradient(
+                    120deg,
+                    #091a2e,
+                    #102947
+                );
 
-            border: 1px solid rgba(201,164,92,.25);
+            border:
+                1px solid rgba(201,164,92,.25);
 
-            box-shadow: 0 25px 70px rgba(7,20,38,.14);
+            box-shadow:
+                0 25px 70px
+                rgba(7,20,38,.14);
         }
 
         .cta-box h2 {
@@ -702,13 +842,17 @@
 
         .footer-content {
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
+
             gap: 20px;
         }
 
         .footer-brand {
             color: #c8d0db;
+
             font-weight: 700;
         }
 
@@ -716,54 +860,78 @@
             color: var(--gold);
         }
 
+        .footer-links {
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+        }
+
+        .footer-links a {
+            transition: .2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-light);
+        }
+
         /* ================= ANIMATION ================= */
 
         @keyframes heroIn {
+
             from {
                 opacity: 0;
-                transform: translateY(25px);
+
+                transform:
+                    translateY(25px);
             }
 
             to {
                 opacity: 1;
-                transform: translateY(0);
+
+                transform:
+                    translateY(0);
             }
+
         }
 
         /* ================= RESPONSIVE ================= */
 
-        @media (max-width: 900px) {
+        @media (max-width: 1000px) {
 
             .navbar {
-                min-height: 72px;
+                gap: 10px;
             }
 
             nav a {
-                padding: 8px 7px;
+                padding:
+                    8px 7px;
+
                 font-size: 11px;
             }
 
             .intro-grid,
             .company-grid {
                 grid-template-columns: 1fr;
+
                 gap: 45px;
             }
 
             .activity-grid {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
-            .cta-box {
-                flex-direction: column;
-                align-items: flex-start;
-            }
         }
 
-        @media (max-width: 650px) {
+        @media (max-width: 700px) {
 
             .navbar {
                 flex-direction: column;
+
                 padding: 13px 0;
+
                 gap: 8px;
             }
 
@@ -773,17 +941,21 @@
 
             nav {
                 width: 100%;
+
                 justify-content: center;
+
                 flex-wrap: wrap;
             }
 
             nav a {
                 font-size: 10px;
-                padding: 6px 7px;
+
+                padding:
+                    6px 7px;
             }
 
             .nav-cta {
-                display: none;
+                margin-right: 0;
             }
 
             .hero {
@@ -804,6 +976,7 @@
 
             .hero-trust {
                 gap: 18px;
+
                 margin-top: 40px;
             }
 
@@ -835,6 +1008,10 @@
 
             .cta-box {
                 padding: 35px 25px;
+
+                flex-direction: column;
+
+                align-items: flex-start;
             }
 
             .cta-box h2 {
@@ -843,19 +1020,31 @@
 
             .footer-content {
                 flex-direction: column;
+
                 text-align: center;
             }
+
+            .footer-links {
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
         }
+
     </style>
 </head>
 
+
 <body>
+
 
     <!-- ================= HEADER ================= -->
 
     <header>
 
         <div class="container navbar">
+
 
             <a href="index.html" class="brand">
 
@@ -864,11 +1053,19 @@
                 </div>
 
                 <div class="brand-text">
-                    <strong>کسری دژ ارجان</strong>
-                    <span>ROAD & CIVIL ENGINEERING</span>
+
+                    <strong>
+                        کسری دژ ارجان
+                    </strong>
+
+                    <span>
+                        ROAD & CIVIL ENGINEERING
+                    </span>
+
                 </div>
 
             </a>
+
 
             <nav>
 
@@ -884,7 +1081,6 @@
                     پروژه‌ها
                 </a>
 
-                <!-- لینک صفحه همکاران -->
                 <a href="clients.html">
                     همکاران
                 </a>
@@ -899,14 +1095,19 @@
 
             </nav>
 
+
         </div>
 
     </header>
 
 
-    <!-- ================= HERO ================= -->
+
+    <!-- ================= MAIN ================= -->
 
     <main>
+
+
+        <!-- ================= HERO ================= -->
 
         <section class="hero">
 
@@ -914,15 +1115,24 @@
 
                 <div class="hero-content">
 
+
                     <div class="eyebrow">
                         شرکت عمرانی و مهندسی
                     </div>
 
+
                     <h1>
+
                         ساختن آینده،
+
                         <br>
-                        <span>با اعتبار و کیفیت.</span>
+
+                        <span>
+                            با اعتبار و کیفیت.
+                        </span>
+
                     </h1>
+
 
                     <p class="hero-description">
 
@@ -932,36 +1142,73 @@
 
                     </p>
 
+
                     <div class="hero-actions">
 
-                        <a href="projects.html" class="btn btn-gold">
+                        <a
+                            href="projects.html"
+                            class="btn btn-gold">
+
                             مشاهده پروژه‌ها
+
                         </a>
 
-                        <a href="about.html" class="btn btn-outline">
+
+                        <a
+                            href="about.html"
+                            class="btn btn-outline">
+
                             درباره شرکت
+
                         </a>
 
                     </div>
+
 
                     <div class="hero-trust">
 
-                        <div class="trust-item">
-                            <strong>۱۴۳۷</strong>
-                            <span>شماره ثبت شرکت</span>
-                        </div>
 
                         <div class="trust-item">
-                            <strong>راه و ابنیه</strong>
-                            <span>حوزه فعالیت</span>
+
+                            <strong>
+                                ۱۴۳۷
+                            </strong>
+
+                            <span>
+                                شماره ثبت شرکت
+                            </span>
+
                         </div>
 
+
                         <div class="trust-item">
-                            <strong>حرفه‌ای</strong>
-                            <span>رویکرد اجرایی</span>
+
+                            <strong>
+                                راه و ابنیه
+                            </strong>
+
+                            <span>
+                                حوزه فعالیت
+                            </span>
+
                         </div>
+
+
+                        <div class="trust-item">
+
+                            <strong>
+                                حرفه‌ای
+                            </strong>
+
+                            <span>
+                                رویکرد اجرایی
+                            </span>
+
+                        </div>
+
 
                     </div>
+
 
                 </div>
 
@@ -973,11 +1220,13 @@
         <div class="gold-line"></div>
 
 
+
         <!-- ================= INTRO ================= -->
 
         <section class="intro">
 
             <div class="container intro-grid">
+
 
                 <div>
 
@@ -985,28 +1234,44 @@
                         درباره کسری دژ ارجان
                     </div>
 
+
                     <h2 class="section-title">
+
                         اعتبار،
-                        <span>پایه‌ی هر پروژه</span>
+
+                        <span>
+                            پایه‌ی هر پروژه
+                        </span>
+
                         است.
+
                     </h2>
+
 
                     <p class="intro-text">
 
-                        شرکت کسری دژ ارجان در زمینه راه و ابنیه فعالیت دارد.
-                        هدف ما ایجاد مجموعه‌ای حرفه‌ای و قابل اعتماد برای
-                        اجرای پروژه‌های عمرانی و ارائه خدمات با کیفیت است.
+                        شرکت کسری دژ ارجان در زمینه راه و ابنیه
+                        فعالیت دارد. هدف ما ایجاد مجموعه‌ای حرفه‌ای
+                        و قابل اعتماد برای اجرای پروژه‌های عمرانی
+                        و ارائه خدمات با کیفیت است.
 
                     </p>
 
+
                     <div class="intro-badge">
-                        ✓ شرکت ثبت‌شده با شماره ۱۴۳۷
+
+                        ✓
+
+                        شرکت ثبت‌شده با شماره ۱۴۳۷
+
                     </div>
 
                 </div>
 
 
+
                 <div class="intro-cards">
+
 
                     <div class="intro-card">
 
@@ -1079,11 +1344,13 @@
 
                     </div>
 
+
                 </div>
 
             </div>
 
         </section>
+
 
 
         <!-- ================= ACTIVITIES ================= -->
@@ -1092,6 +1359,7 @@
 
             <div class="container">
 
+
                 <div class="section-head">
 
                     <div class="section-label">
@@ -1099,8 +1367,13 @@
                     </div>
 
                     <h2 class="section-title">
+
                         تخصص ما،
-                        <span>ساختن است.</span>
+
+                        <span>
+                            ساختن است.
+                        </span>
+
                     </h2>
 
                     <p>
@@ -1111,7 +1384,9 @@
                 </div>
 
 
+
                 <div class="activity-grid">
+
 
                     <div class="activity">
 
@@ -1166,11 +1441,13 @@
 
                     </div>
 
+
                 </div>
 
             </div>
 
         </section>
+
 
 
         <!-- ================= COMPANY ================= -->
@@ -1179,6 +1456,7 @@
 
             <div class="container company-grid">
 
+
                 <div>
 
                     <div class="section-label">
@@ -1186,12 +1464,21 @@
                     </div>
 
                     <h2 class="section-title">
+
                         یک نام،
+
                         <br>
+
                         یک تعهد،
+
                         <br>
-                        <span>یک مسیر حرفه‌ای.</span>
+
+                        <span>
+                            یک مسیر حرفه‌ای.
+                        </span>
+
                     </h2>
+
 
                     <p class="company-description">
 
@@ -1204,7 +1491,9 @@
                 </div>
 
 
+
                 <div class="company-info">
+
 
                     <div class="info-box">
 
@@ -1257,11 +1546,13 @@
 
                     </div>
 
+
                 </div>
 
             </div>
 
         </section>
+
 
 
         <!-- ================= CTA ================= -->
@@ -1270,7 +1561,9 @@
 
             <div class="container">
 
+
                 <div class="cta-box">
+
 
                     <div>
 
@@ -1279,14 +1572,21 @@
                         </h2>
 
                         <p>
-                            برای آشنایی بیشتر با شرکت و پروژه‌ها با ما در ارتباط باشید.
+                            برای آشنایی بیشتر با شرکت، پروژه‌ها و سوابق اجرایی
+                            با ما در ارتباط باشید.
                         </p>
 
                     </div>
 
-                    <a href="contact.html" class="btn btn-gold">
+
+                    <a
+                        href="contact.html"
+                        class="btn btn-gold">
+
                         تماس با شرکت
+
                     </a>
+
 
                 </div>
 
@@ -1294,7 +1594,9 @@
 
         </section>
 
+
     </main>
+
 
 
     <!-- ================= FOOTER ================= -->
@@ -1303,20 +1605,52 @@
 
         <div class="container footer-content">
 
+
             <div class="footer-brand">
                 شرکت کسری دژ ارجان
             </div>
+
+
+            <div class="footer-links">
+
+                <a href="about.html">
+                    درباره ما
+                </a>
+
+                <a href="projects.html">
+                    پروژه‌ها
+                </a>
+
+                <a href="clients.html">
+                    همکاران
+                </a>
+
+                <a href="contact.html">
+                    تماس با ما
+                </a>
+
+                <a href="messages.html">
+                    پیام به اپراتور
+                </a>
+
+            </div>
+
 
             <div>
                 © ۱۴۰۵ — تمامی حقوق محفوظ است
             </div>
 
+
             <div>
+
                 راه و ابنیه |
+
                 <span class="footer-gold">
                     با اعتبار، برای آینده
                 </span>
+
             </div>
+
 
         </div>
 
