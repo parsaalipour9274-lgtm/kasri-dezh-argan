@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>پروژه‌ها | کسری دژ ارجان</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Tahoma, Arial, sans-serif;
+            background: #f4f7fa;
+            color: #1e293b;
+        }
+
+        header {
+            background: #0f172a;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 18px;
+        }
+
+        nav a:hover {
+            color: #f59e0b;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 70px 20px 40px;
+        }
+
+        .page-header h1 {
+            font-size: 42px;
+        }
+
+        .page-header p {
+            color: #64748b;
+        }
+
+        .projects {
+            padding: 30px 8% 80px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,.08);
+            transition: .3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .project-image {
+            height: 200px;
+            background: linear-gradient(135deg,#334155,#64748b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h2 {
+            color: #0f172a;
+        }
+
+        .project-content p {
+            color: #64748b;
+            line-height: 2;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #fef3c7;
+            color: #92400e;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        @media(max-width:700px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 5px;
+                font-size: 13px;
+            }
+
+            .page-header h1 {
+                font-size: 32px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        کسری دژ ارجان
+    </div>
+
+    <nav>
+
+        <a href="index.html">خانه</a>
+
+        <a href="about.html">درباره ما</a>
+
+        <a href="projects.html">پروژه‌ها</a>
+
+        <a href="contact.html">تماس با ما</a>
+
+        <a href="messages.html">💬 پیام به اپراتور</a>
+
+    </nav>
+
+</header>
+
+<section class="page-header">
+
+    <h1>پروژه‌های شرکت</h1>
+
+    <p>
+        بخشی از فعالیت‌ها و پروژه‌های عمرانی
+        شرکت کسری دژ ارجان
+    </p>
+
+</section>
+
+<section class="projects">
+
+    <div class="project-card">
+
+        <div class="project-image">
+            پروژه عمرانی ۱
+        </div>
+
+        <div class="project-content">
+
+            <span class="tag">
+                راه و ابنیه
+            </span>
+
+            <h2>
+                پروژه راه‌سازی
+            </h2>
+
+            <p>
+                اجرای عملیات عمرانی و راه‌سازی
+                با استفاده از توان اجرایی و نیروی متخصص.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="project-card">
+
+        <div class="project-image">
+            پروژه عمرانی ۲
+        </div>
+
+        <div class="project-content">
+
+            <span class="tag">
+                ابنیه
+            </span>
+
+            <h2>
+                پروژه ابنیه
+            </h2>
+
+            <p>
+                اجرای پروژه‌های ساختمانی و عمرانی
+                در حوزه ابنیه.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="project-card">
+
+        <div class="project-image">
+            پروژه عمرانی ۳
+        </div>
+
+        <div class="project-content">
+
+            <span class="tag">
+                عمرانی
+            </span>
+
+            <h2>
+                پروژه عمرانی
+            </h2>
+
+            <p>
+                بخشی از سوابق اجرایی شرکت
+                در پروژه‌های عمرانی.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="project-card">
+
+        <div class="project-image">
+            پروژه عمرانی ۴
+        </div>
+
+        <div class="project-content">
+
+            <span class="tag">
+                راه و ابنیه
+            </span>
+
+            <h2>
+                پروژه عمرانی
+            </h2>
+
+            <p>
+                اجرای عملیات مختلف عمرانی
+                در زمینه راه و ابنیه.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© ۱۴۰۵ شرکت کسری دژ ارجان</p>
+</footer>
+
+</body>
+</html>

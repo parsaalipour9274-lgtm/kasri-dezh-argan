@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شرکت کسری دژ ارجان</title>
+
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Tahoma, Arial, sans-serif;
+            background: #f4f7fa;
+            color: #1e293b;
+        }
+
+        header {
+            background: #0f172a;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 18px;
+        }
+
+        nav a:hover {
+            color: #f59e0b;
+        }
+
+        .hero {
+            min-height: 500px;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background: linear-gradient(135deg, #0f172a, #1e3a5f);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            font-size: 20px;
+            line-height: 2;
+        }
+
+        .button {
+            margin-top: 20px;
+            padding: 14px 30px;
+            background: #f59e0b;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .about {
+            padding: 70px 10%;
+            text-align: center;
+            background: white;
+        }
+
+        .about h2,
+        .info h2 {
+            font-size: 32px;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 2.2;
+            font-size: 18px;
+        }
+
+        .info {
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 250px;
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.08);
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        @media(max-width:700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 5px;
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">کسری دژ ارجان</div>
+
+    <nav>
+        <a href="index.html">خانه</a>
+        <a href="about.html">درباره ما</a>
+        <a href="projects.html">پروژه‌ها</a>
+        <a href="contact.html">تماس با ما</a>
+        <a href="messages.html">💬 پیام به اپراتور</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>شرکت کسری دژ ارجان</h1>
+
+    <p>
+        فعال در حوزه راه و ابنیه، با تجربه در اجرای
+        پروژه‌های عمرانی و تلاش برای ارائه خدمات
+        حرفه‌ای و باکیفیت.
+    </p>
+
+    <a href="projects.html" class="button">
+        مشاهده پروژه‌ها
+    </a>
+</section>
+
+<section class="about">
+    <h2>درباره شرکت</h2>
+
+    <p>
+        شرکت کسری دژ ارجان با شماره ثبت ۱۴۳۷
+        در زمینه راه و ابنیه فعالیت دارد و
+        در طول فعالیت خود پروژه‌های متعددی را
+        اجرا کرده است.
+    </p>
+</section>
+
+<section class="info">
+
+    <h2>اطلاعات شرکت</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>شماره ثبت</h3>
+            <p>۱۴۳۷</p>
+        </div>
+
+        <div class="card">
+            <h3>حوزه فعالیت</h3>
+            <p>راه و ابنیه</p>
+        </div>
+
+        <div class="card">
+            <h3>مدیرعامل</h3>
+            <p>عدالت علی پور</p>
+        </div>
+
+        <div class="card">
+            <h3>تماس</h3>
+            <p>۰۹۹۳۷۰۷۹۲۷۴</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© ۱۴۰۵ شرکت کسری دژ ارجان</p>
+</footer>
+
+</body>
+</html>

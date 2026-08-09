@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>درباره ما | کسری دژ ارجان</title>
+
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Tahoma, Arial, sans-serif;
+            background: #f4f7fa;
+            color: #1e293b;
+        }
+
+        header {
+            background: #0f172a;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 18px;
+        }
+
+        nav a:hover {
+            color: #f59e0b;
+        }
+
+        .page {
+            padding: 70px 10%;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .title h1 {
+            font-size: 40px;
+        }
+
+        .title p {
+            color: #64748b;
+        }
+
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            line-height: 2.2;
+            font-size: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.08);
+        }
+
+        .members {
+            margin-top: 50px;
+        }
+
+        .members h2 {
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .card {
+            width: 280px;
+            padding: 30px;
+            text-align: center;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.08);
+        }
+
+        .manager {
+            border-top: 5px solid #f59e0b;
+        }
+
+        .card p {
+            color: #64748b;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        @media(max-width:700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 5px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">کسری دژ ارجان</div>
+
+    <nav>
+        <a href="index.html">خانه</a>
+        <a href="about.html">درباره ما</a>
+        <a href="projects.html">پروژه‌ها</a>
+        <a href="contact.html">تماس با ما</a>
+        <a href="messages.html">💬 پیام به اپراتور</a>
+    </nav>
+
+</header>
+
+<main class="page">
+
+    <div class="title">
+        <h1>درباره شرکت کسری دژ ارجان</h1>
+        <p>معرفی شرکت و اعضای هیئت‌مدیره</p>
+    </div>
+
+    <div class="content">
+
+        <p>
+            شرکت کسری دژ ارجان با شماره ثبت ۱۴۳۷
+            در زمینه راه و ابنیه فعالیت می‌کند.
+        </p>
+
+        <p>
+            این شرکت با بهره‌گیری از تجربه و توان اجرایی،
+            در پروژه‌های متعدد عمرانی فعالیت داشته و
+            تلاش می‌کند خدمات عمرانی را با کیفیت و
+            تعهد حرفه‌ای ارائه کند.
+        </p>
+
+    </div>
+
+    <section class="members">
+
+        <h2>اعضای هیئت‌مدیره</h2>
+
+        <div class="cards">
+
+            <div class="card manager">
+                <h3>عدالت علی پور</h3>
+                <p>مدیرعامل</p>
+            </div>
+
+            <div class="card">
+                <h3>فاطمه جمشیدی طلاگه</h3>
+                <p>عضو هیئت‌مدیره</p>
+            </div>
+
+            <div class="card">
+                <h3>جاوید آشناگر</h3>
+                <p>عضو هیئت‌مدیره</p>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© ۱۴۰۵ شرکت کسری دژ ارجان</p>
+</footer>
+
+</body>
+</html>

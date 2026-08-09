@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>تماس با ما | کسری دژ ارجان</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Tahoma, Arial, sans-serif;
+            background: #f4f7fa;
+            color: #1e293b;
+        }
+
+        header {
+            background: #0f172a;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 18px;
+        }
+
+        nav a:hover {
+            color: #f59e0b;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 70px 20px 40px;
+        }
+
+        .page-header h1 {
+            font-size: 42px;
+        }
+
+        .page-header p {
+            color: #64748b;
+        }
+
+        .contact-container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px 30px 70px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 30px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,.08);
+        }
+
+        .contact-icon {
+            font-size: 45px;
+        }
+
+        .contact-card p {
+            color: #64748b;
+            line-height: 2;
+        }
+
+        .phone-button,
+        .message-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 14px 25px;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .phone-button {
+            background: #16a34a;
+        }
+
+        .message-button {
+            background: #2563eb;
+        }
+
+        .company-info {
+            max-width: 1000px;
+            margin: 0 auto 70px;
+            padding: 40px;
+            background: #0f172a;
+            color: white;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .company-info h2 {
+            color: #f59e0b;
+        }
+
+        .company-info p {
+            line-height: 2;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        @media(max-width:700px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 5px;
+                font-size: 13px;
+            }
+
+            .page-header h1 {
+                font-size: 32px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        کسری دژ ارجان
+    </div>
+
+    <nav>
+
+        <a href="index.html">خانه</a>
+
+        <a href="about.html">درباره ما</a>
+
+        <a href="projects.html">پروژه‌ها</a>
+
+        <a href="contact.html">تماس با ما</a>
+
+        <a href="messages.html">💬 پیام به اپراتور</a>
+
+    </nav>
+
+</header>
+
+<section class="page-header">
+
+    <h1>تماس با ما</h1>
+
+    <p>
+        برای ارتباط با شرکت کسری دژ ارجان
+        با ما در تماس باشید.
+    </p>
+
+</section>
+
+<section class="contact-container">
+
+    <div class="contact-card">
+
+        <div class="contact-icon">📞</div>
+
+        <h2>تلفن شرکت</h2>
+
+        <p>
+            برای تماس مستقیم با شرکت
+            با شماره زیر تماس بگیرید.
+        </p>
+
+        <a
+            class="phone-button"
+            href="tel:09937079274">
+
+            📞 ۰۹۹۳۷۰۷۹۲۷۴
+
+        </a>
+
+    </div>
+
+
+    <div class="contact-card">
+
+        <div class="contact-icon">💬</div>
+
+        <h2>پیام به اپراتور</h2>
+
+        <p>
+            اگر می‌خواهید درخواست یا سوالی
+            برای اپراتور ارسال کنید،
+            از بخش پیام‌رسان استفاده کنید.
+        </p>
+
+        <a
+            class="message-button"
+            href="messages.html">
+
+            ارسال پیام
+
+        </a>
+
+    </div>
+
+</section>
+
+<section class="company-info">
+
+    <h2>اطلاعات شرکت</h2>
+
+    <p>
+        شرکت کسری دژ ارجان
+    </p>
+
+    <p>
+        شماره ثبت: ۱۴۳۷
+    </p>
+
+    <p>
+        زمینه فعالیت: راه و ابنیه
+    </p>
+
+    <p>
+        مدیرعامل: عدالت علی پور
+    </p>
+
+</section>
+
+<footer>
+
+    <p>
+        © ۱۴۰۵ شرکت کسری دژ ارجان
+    </p>
+
+</footer>
+
+</body>
+</html>
