@@ -1,120 +1,735 @@
+```html
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>درباره ما | کسری دژ ارجان</title>
+    <title>درباره ما | شرکت کسری دژ ارجان</title>
+
+    <meta name="description"
+        content="معرفی مدیرعامل و اعضای هیئت مدیره شرکت کسری دژ ارجان">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <style>
-        * { box-sizing: border-box; }
+        :root {
+            --navy: #071426;
+            --navy-2: #0b1d35;
+            --navy-3: #102947;
+            --gold: #c9a45c;
+            --gold-light: #e2c681;
+            --gold-dark: #9f7937;
+            --white: #fff;
+            --text: #172235;
+            --muted: #6d7786;
+            --light: #f5f6f8;
+            --container: 1180px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
-            margin: 0;
-            font-family: Tahoma, Arial, sans-serif;
-            background: #f4f7fa;
-            color: #1e293b;
+            font-family: "Vazirmatn", Tahoma, sans-serif;
+            background: var(--white);
+            color: var(--text);
+            line-height: 1.9;
         }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(92%, var(--container));
+            margin: auto;
+        }
+
+        /* HEADER */
 
         header {
-            background: #0f172a;
-            color: white;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1000;
+
+            background: rgba(7, 20, 38, .88);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid rgba(201,164,92,.18);
         }
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
+        .navbar {
+            min-height: 82px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            white-space: nowrap;
+        }
+
+        .brand-mark {
+            width: 43px;
+            height: 43px;
+
+            display: grid;
+            place-items: center;
+
+            border: 1px solid var(--gold);
+            color: var(--gold-light);
+
+            font-weight: 900;
+            font-size: 18px;
+
+            border-radius: 12px;
+
+            background: rgba(201,164,92,.08);
+        }
+
+        .brand-text strong {
+            display: block;
+            color: white;
+            font-size: 17px;
+            font-weight: 800;
+        }
+
+        .brand-text span {
+            display: block;
+            color: #9daabd;
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 7px;
         }
 
         nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 18px;
+            color: #dfe6ef;
+            font-size: 13px;
+            font-weight: 500;
+
+            padding: 10px 14px;
+            border-radius: 8px;
+
+            transition: .25s ease;
         }
 
-        nav a:hover {
-            color: #f59e0b;
+        nav a:hover,
+        nav a.active {
+            color: var(--gold-light);
+            background: rgba(201,164,92,.09);
         }
 
-        .page {
-            padding: 70px 10%;
+        .nav-cta {
+            border: 1px solid rgba(201,164,92,.55);
+            color: var(--gold-light) !important;
         }
 
-        .title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
+        /* HERO */
 
-        .title h1 {
-            font-size: 40px;
-        }
+        .page-hero {
+            min-height: 470px;
 
-        .title p {
-            color: #64748b;
-        }
-
-        .content {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            line-height: 2.2;
-            font-size: 18px;
-            box-shadow: 0 5px 20px rgba(0,0,0,.08);
-        }
-
-        .members {
-            margin-top: 50px;
-        }
-
-        .members h2 {
-            text-align: center;
-        }
-
-        .cards {
             display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-            margin-top: 30px;
+            align-items: center;
+
+            position: relative;
+            overflow: hidden;
+
+            background:
+                radial-gradient(circle at 15% 25%, rgba(201,164,92,.16), transparent 30%),
+                radial-gradient(circle at 85% 80%, rgba(29,73,120,.25), transparent 35%),
+                linear-gradient(125deg,#050e1b,#091a30 55%,#102947);
         }
 
-        .card {
-            width: 280px;
-            padding: 30px;
-            text-align: center;
+        .page-hero::before {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            opacity: .07;
+
+            background-image:
+                linear-gradient(rgba(255,255,255,.8) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.8) 1px, transparent 1px);
+
+            background-size: 55px 55px;
+
+            transform: perspective(500px) rotateX(55deg) scale(1.5);
+            transform-origin: bottom;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+
+            padding-top: 80px;
+
+            max-width: 760px;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            color: var(--gold-light);
+
+            font-size: 13px;
+            font-weight: 700;
+
+            margin-bottom: 20px;
+        }
+
+        .eyebrow::before {
+            content: "";
+
+            width: 38px;
+            height: 1px;
+
+            background: var(--gold);
+        }
+
+        .hero-content h1 {
+            color: white;
+
+            font-size: clamp(38px,5vw,65px);
+            line-height: 1.35;
+
+            font-weight: 900;
+
+            margin-bottom: 18px;
+        }
+
+        .hero-content h1 span {
+            color: var(--gold-light);
+        }
+
+        .hero-content p {
+            color: #b8c3d2;
+
+            font-size: 15px;
+            line-height: 2.3;
+
+            max-width: 650px;
+        }
+
+        .gold-line {
+            height: 3px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    var(--gold),
+                    transparent
+                );
+        }
+
+        /* INTRO */
+
+        .intro {
+            padding: 90px 0;
             background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,.08);
         }
 
-        .manager {
-            border-top: 5px solid #f59e0b;
+        .section-head {
+            text-align: center;
+            max-width: 720px;
+
+            margin: 0 auto 55px;
         }
 
-        .card p {
-            color: #64748b;
+        .section-label {
+            color: var(--gold-dark);
+
+            font-size: 12px;
+            font-weight: 800;
+
+            margin-bottom: 10px;
         }
+
+        .section-title {
+            color: var(--navy);
+
+            font-size: clamp(30px,4vw,43px);
+            line-height: 1.5;
+
+            font-weight: 900;
+
+            margin-bottom: 15px;
+        }
+
+        .section-title span {
+            color: var(--gold-dark);
+        }
+
+        .section-head p {
+            color: var(--muted);
+
+            font-size: 14px;
+            line-height: 2.2;
+        }
+
+        /* MANAGEMENT */
+
+        .management {
+            padding: 100px 0;
+
+            background: var(--light);
+        }
+
+        .management-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3,1fr);
+
+            gap: 22px;
+        }
+
+        .person {
+            position: relative;
+
+            background: white;
+
+            border: 1px solid #e7ebef;
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            transition: .35s ease;
+        }
+
+        .person:hover {
+            transform: translateY(-8px);
+
+            border-color: rgba(201,164,92,.5);
+
+            box-shadow: 0 25px 60px rgba(7,20,38,.1);
+        }
+
+        .person-top {
+            height: 115px;
+
+            position: relative;
+
+            background:
+                radial-gradient(circle at 20% 20%,rgba(201,164,92,.2),transparent 35%),
+                linear-gradient(135deg,var(--navy),var(--navy-3));
+        }
+
+        .person-number {
+            position: absolute;
+
+            top: 18px;
+            right: 20px;
+
+            color: rgba(255,255,255,.35);
+
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .person-symbol {
+            position: absolute;
+
+            left: 50%;
+            bottom: -32px;
+
+            transform: translateX(-50%);
+
+            width: 68px;
+            height: 68px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 50%;
+
+            background: var(--navy);
+
+            border: 2px solid var(--gold);
+
+            color: var(--gold-light);
+
+            font-size: 25px;
+            font-weight: 900;
+        }
+
+        .person-body {
+            padding: 55px 28px 30px;
+
+            text-align: center;
+        }
+
+        .person-body h3 {
+            color: var(--navy);
+
+            font-size: 20px;
+            font-weight: 900;
+
+            margin-bottom: 5px;
+        }
+
+        .position {
+            display: inline-block;
+
+            color: var(--gold-dark);
+
+            font-size: 12px;
+            font-weight: 800;
+
+            margin-bottom: 25px;
+        }
+
+        .details {
+            text-align: right;
+
+            border-top: 1px solid #edf0f3;
+
+            padding-top: 20px;
+        }
+
+        .detail {
+            display: flex;
+            justify-content: space-between;
+
+            gap: 15px;
+
+            padding: 9px 0;
+
+            border-bottom: 1px solid #f0f2f4;
+
+            font-size: 11px;
+        }
+
+        .detail:last-child {
+            border-bottom: none;
+        }
+
+        .detail span:first-child {
+            color: #8993a1;
+        }
+
+        .detail span:last-child {
+            color: var(--text);
+
+            font-weight: 600;
+
+            text-align: left;
+        }
+
+        .phone-box {
+            margin-top: 18px;
+
+            padding: 12px;
+
+            border-radius: 9px;
+
+            background: #faf7f0;
+
+            border: 1px solid #eadfc9;
+
+            color: #725827;
+
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        /* COMPANY STORY */
+
+        .story {
+            padding: 100px 0;
+
+            background: var(--navy);
+
+            color: white;
+        }
+
+        .story-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1.4fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .story .section-label {
+            color: var(--gold-light);
+        }
+
+        .story h2 {
+            color: white;
+
+            font-size: clamp(30px,4vw,43px);
+
+            line-height: 1.5;
+
+            font-weight: 900;
+        }
+
+        .story h2 span {
+            color: var(--gold-light);
+        }
+
+        .story-text {
+            color: #aab7c8;
+
+            font-size: 14px;
+
+            line-height: 2.3;
+        }
+
+        .story-boxes {
+            display: grid;
+
+            grid-template-columns: repeat(2,1fr);
+
+            gap: 14px;
+        }
+
+        .story-box {
+            padding: 25px;
+
+            border: 1px solid rgba(255,255,255,.1);
+
+            background: rgba(255,255,255,.035);
+
+            border-radius: 12px;
+        }
+
+        .story-box strong {
+            display: block;
+
+            color: var(--gold-light);
+
+            font-size: 23px;
+
+            margin-bottom: 5px;
+        }
+
+        .story-box span {
+            color: #8795a8;
+
+            font-size: 11px;
+        }
+
+        /* CTA */
+
+        .cta {
+            padding: 80px 0;
+
+            background: #f7f7f6;
+        }
+
+        .cta-box {
+            padding: 50px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 30px;
+
+            border-radius: 18px;
+
+            background: linear-gradient(120deg,#091a2e,#102947);
+
+            border: 1px solid rgba(201,164,92,.25);
+        }
+
+        .cta-box h2 {
+            color: white;
+
+            font-size: 27px;
+
+            margin-bottom: 7px;
+        }
+
+        .cta-box p {
+            color: #aab7c8;
+
+            font-size: 13px;
+        }
+
+        .btn {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-width: 150px;
+
+            padding: 13px 24px;
+
+            border-radius: 8px;
+
+            font-size: 13px;
+            font-weight: 800;
+
+            transition: .3s ease;
+        }
+
+        .btn-gold {
+            color: #101a29;
+
+            background: linear-gradient(135deg,var(--gold-light),var(--gold));
+
+            box-shadow: 0 12px 30px rgba(201,164,92,.18);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+        }
+
+        /* FOOTER */
 
         footer {
-            background: #0f172a;
-            color: white;
-            text-align: center;
-            padding: 30px;
+            padding: 35px 0;
+
+            background: #040b14;
+
+            color: #7d8998;
+
+            font-size: 11px;
         }
 
-        @media(max-width:700px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
+        .footer-content {
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 20px;
+        }
+
+        .footer-brand {
+            color: #c8d0db;
+
+            font-weight: 700;
+        }
+
+        .footer-gold {
+            color: var(--gold);
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:900px) {
+
+            .navbar {
+                min-height: 72px;
             }
 
             nav a {
-                margin: 0 5px;
-                font-size: 13px;
+                padding: 8px 7px;
+                font-size: 11px;
+            }
+
+            .management-grid {
+                grid-template-columns: 1fr;
+                max-width: 550px;
+                margin: auto;
+            }
+
+            .story-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media(max-width:650px) {
+
+            .navbar {
+                flex-direction: column;
+
+                padding: 13px 0;
+
+                gap: 8px;
+            }
+
+            .brand-text span {
+                display: none;
+            }
+
+            nav {
+                width: 100%;
+
+                justify-content: center;
+
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                font-size: 10px;
+
+                padding: 6px 7px;
+            }
+
+            .nav-cta {
+                display: none;
+            }
+
+            .page-hero {
+                min-height: 520px;
+            }
+
+            .hero-content {
+                padding-top: 100px;
+            }
+
+            .intro,
+            .management,
+            .story {
+                padding: 70px 0;
+            }
+
+            .story-boxes {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-box {
+                padding: 35px 25px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+
+                text-align: center;
             }
         }
     </style>
@@ -124,60 +739,404 @@
 
 <header>
 
-    <div class="logo">کسری دژ ارجان</div>
+    <div class="container navbar">
 
-    <nav>
-        <a href="index.html">خانه</a>
-        <a href="about.html">درباره ما</a>
-        <a href="projects.html">پروژه‌ها</a>
-        <a href="contact.html">تماس با ما</a>
-        <a href="messages.html">💬 پیام به اپراتور</a>
-    </nav>
+        <a href="index.html" class="brand">
+
+            <div class="brand-mark">ک</div>
+
+            <div class="brand-text">
+                <strong>کسری دژ ارجان</strong>
+                <span>ROAD & CIVIL ENGINEERING</span>
+            </div>
+
+        </a>
+
+        <nav>
+
+            <a href="index.html">
+                خانه
+            </a>
+
+            <a href="about.html" class="active">
+                درباره ما
+            </a>
+
+            <a href="projects.html">
+                پروژه‌ها
+            </a>
+
+            <a href="clients.html">
+                همکاران
+            </a>
+
+            <a href="contact.html">
+                تماس با ما
+            </a>
+
+            <a href="messages.html" class="nav-cta">
+                پیام به اپراتور
+            </a>
+
+        </nav>
+
+    </div>
 
 </header>
 
-<main class="page">
 
-    <div class="title">
-        <h1>درباره شرکت کسری دژ ارجان</h1>
-        <p>معرفی شرکت و اعضای هیئت‌مدیره</p>
-    </div>
+<main>
 
-    <div class="content">
+    <section class="page-hero">
 
-        <p>
-            شرکت کسری دژ ارجان با شماره ثبت ۱۴۳۷
-            در زمینه راه و ابنیه فعالیت می‌کند.
-        </p>
+        <div class="container">
 
-        <p>
-            این شرکت با بهره‌گیری از تجربه و توان اجرایی،
-            در پروژه‌های متعدد عمرانی فعالیت داشته و
-            تلاش می‌کند خدمات عمرانی را با کیفیت و
-            تعهد حرفه‌ای ارائه کند.
-        </p>
+            <div class="hero-content">
 
-    </div>
+                <div class="eyebrow">
+                    معرفی شرکت
+                </div>
 
-    <section class="members">
+                <h1>
+                    درباره
+                    <span>کسری دژ ارجان</span>
+                </h1>
 
-        <h2>اعضای هیئت‌مدیره</h2>
+                <p>
+                    پشت هر پروژه موفق، مجموعه‌ای از تجربه، تخصص،
+                    تعهد و مدیریت حرفه‌ای قرار دارد. با مدیران و
+                    اعضای هیئت مدیره شرکت آشنا شوید.
+                </p>
 
-        <div class="cards">
-
-            <div class="card manager">
-                <h3>عدالت علی پور</h3>
-                <p>مدیرعامل</p>
             </div>
 
-            <div class="card">
-                <h3>فاطمه جمشیدی طلاگه</h3>
-                <p>عضو هیئت‌مدیره</p>
+        </div>
+
+    </section>
+
+    <div class="gold-line"></div>
+
+
+    <!-- INTRO -->
+
+    <section class="intro">
+
+        <div class="container">
+
+            <div class="section-head">
+
+                <div class="section-label">
+                    مدیریت و ساختار سازمانی
+                </div>
+
+                <h2 class="section-title">
+                    تجربه‌ای که
+                    <span>پشت پروژه‌هاست.</span>
+                </h2>
+
+                <p>
+                    شرکت کسری دژ ارجان با تکیه بر دانش تخصصی،
+                    تجربه اجرایی و حضور مستمر اعضای مدیریتی،
+                    مسیر خود را در حوزه راه و ابنیه دنبال می‌کند.
+                </p>
+
             </div>
 
-            <div class="card">
-                <h3>جاوید آشناگر</h3>
-                <p>عضو هیئت‌مدیره</p>
+        </div>
+
+    </section>
+
+
+    <!-- MANAGEMENT -->
+
+    <section class="management">
+
+        <div class="container">
+
+            <div class="management-grid">
+
+
+                <!-- عدالت علی پور -->
+
+                <article class="person">
+
+                    <div class="person-top">
+
+                        <span class="person-number">
+                            ۰۱
+                        </span>
+
+                        <div class="person-symbol">
+                            ع
+                        </div>
+
+                    </div>
+
+                    <div class="person-body">
+
+                        <h3>
+                            عدالت علی پور
+                        </h3>
+
+                        <span class="position">
+                            مدیرعامل و سهامدار
+                        </span>
+
+                        <div class="details">
+
+                            <div class="detail">
+                                <span>تحصیلات</span>
+                                <span>کارشناسی ارشد سازه - عمران</span>
+                            </div>
+
+                            <div class="detail">
+                                <span>سابقه مهندسی</span>
+                                <span>۲۰ سال</span>
+                            </div>
+
+                            <div class="detail">
+                                <span>سابقه حضور در شرکت</span>
+                                <span>از تاریخ تأسیس</span>
+                            </div>
+
+                            <div class="detail">
+                                <span>سمت</span>
+                                <span>مدیرعامل</span>
+                            </div>
+
+                            <div class="detail">
+                                <span>سهام</span>
+                                <span>۹۸ درصد</span>
+                            </div>
+
+                        </div>
+
+                        <div class="phone-box">
+                            تماس مدیرعامل:
+                            ۰۹۱۶۹۷۳۱۹۶۶
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- فاطمه جمشیدی -->
+
+                <article class="person">
+
+                    <div class="person-top">
+
+                        <span class="person-number">
+                            ۰۲
+                        </span>
+
+                        <div class="person-symbol">
+                            ف
+                        </div>
+
+                    </div>
+
+                    <div class="person-body">
+
+                        <h3>
+                            فاطمه جمشیدی طلاگه
+                        </h3>
+
+                        <span class="position">
+                            عضو هیئت مدیره و سهامدار
+                        </span>
+
+                        <div class="details">
+
+                            <div class="detail">
+                                <span>تحصیلات</span>
+                                <span>کارشناسی معماری</span>
+                            </div>
+
+                            <div class="detail">
+                                <span>سابقه مهندسی</span>
+                                <span>۵ سال</span>
+                            </div>
+
+                            <div class="detail">
+                                <span>سابقه حضور در شرکت</span>
+                                <span>۴ سال</span>
+                            </div>
+
+                            <div class="detail">
+                                <span>سمت</span>
+                                <span>عضو هیئت مدیره</span>
+                            </div>
+
+                            <div class="detail">
+                                <span>سهام</span>
+                                <span>۱ درصد</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- جاوید آشناگر -->
+
+                <article class="person">
+
+                    <div class="person-top">
+
+                        <span class="person-number">
+                            ۰۳
+                        </span>
+
+                        <div class="person-symbol">
+                            ج
+                        </div>
+
+                    </div>
+
+                    <div class="person-body">
+
+                        <h3>
+                            جاوید آشناگر
+                        </h3>
+
+                        <span class="position">
+                            نایب‌رئیس هیئت مدیره و سهامدار
+                        </span>
+
+                        <div class="details">
+
+                            <div class="detail">
+                                <span>تحصیلات</span>
+                                <span>کارشناسی ارشد عمران از دانشگاه مالزی</span>
+                            </div>
+
+                            <div class="detail">
+                                <span>سابقه مهندسی</span>
+                                <span>۲۰ سال</span>
+                            </div>
+
+                            <div class="detail">
+                                <span>سابقه حضور در شرکت</span>
+                                <span>۲۰ سال</span>
+                            </div>
+
+                            <div class="detail">
+                                <span>سمت</span>
+                                <span>نایب‌رئیس هیئت مدیره</span>
+                            </div>
+
+                            <div class="detail">
+                                <span>سهام</span>
+                                <span>۱ درصد</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STORY -->
+
+    <section class="story">
+
+        <div class="container story-grid">
+
+            <div>
+
+                <div class="section-label">
+                    هویت شرکت
+                </div>
+
+                <h2>
+                    تجربه،
+                    <br>
+                    تخصص،
+                    <br>
+                    <span>تعهد به آینده.</span>
+                </h2>
+
+            </div>
+
+            <div>
+
+                <p class="story-text">
+
+                    شرکت کسری دژ ارجان با هدف حضور حرفه‌ای در صنعت
+                    عمران و اجرای پروژه‌های راه و ابنیه فعالیت می‌کند.
+                    تجربه مدیریتی و تخصص فنی اعضای مجموعه، پشتوانه‌ای
+                    برای اجرای دقیق و مسئولانه پروژه‌هاست.
+
+                </p>
+
+                <br>
+
+                <div class="story-boxes">
+
+                    <div class="story-box">
+                        <strong>۲۰+</strong>
+                        <span>سال سابقه مهندسی مدیران</span>
+                    </div>
+
+                    <div class="story-box">
+                        <strong>۹۸٪</strong>
+                        <span>سهام مدیرعامل</span>
+                    </div>
+
+                    <div class="story-box">
+                        <strong>راه</strong>
+                        <span>حوزه تخصصی فعالیت</span>
+                    </div>
+
+                    <div class="story-box">
+                        <strong>ابنیه</strong>
+                        <span>حوزه تخصصی فعالیت</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <div class="cta-box">
+
+                <div>
+
+                    <h2>
+                        درباره پروژه‌های ما بیشتر بدانید.
+                    </h2>
+
+                    <p>
+                        سابقه اجرایی و پروژه‌های شرکت را مشاهده کنید.
+                    </p>
+
+                </div>
+
+                <a href="projects.html" class="btn btn-gold">
+                    مشاهده پروژه‌ها
+                </a>
+
             </div>
 
         </div>
@@ -186,9 +1145,30 @@
 
 </main>
 
+
 <footer>
-    <p>© ۱۴۰۵ شرکت کسری دژ ارجان</p>
+
+    <div class="container footer-content">
+
+        <div class="footer-brand">
+            شرکت کسری دژ ارجان
+        </div>
+
+        <div>
+            © ۱۴۰۵ — تمامی حقوق محفوظ است
+        </div>
+
+        <div>
+            راه و ابنیه |
+            <span class="footer-gold">
+                با اعتبار، برای آینده
+            </span>
+        </div>
+
+    </div>
+
 </footer>
 
 </body>
 </html>
+```

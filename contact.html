@@ -1,272 +1,1338 @@
+```html
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <title>تماس با ما | شرکت کسری دژ ارجان</title>
 
-    <title>تماس با ما | کسری دژ ارجان</title>
+    <meta name="description"
+        content="راه‌های ارتباطی و فرم تماس با شرکت کسری دژ ارجان">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <style>
+        :root {
+            --navy: #071426;
+            --navy-2: #0b1d35;
+            --navy-3: #102947;
+
+            --gold: #c9a45c;
+            --gold-light: #e2c681;
+            --gold-dark: #9f7937;
+
+            --white: #fff;
+            --text: #172235;
+            --muted: #6d7786;
+            --light: #f5f6f8;
+
+            --container: 1180px;
+        }
 
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            margin: 0;
-            font-family: Tahoma, Arial, sans-serif;
-            background: #f4f7fa;
-            color: #1e293b;
+            font-family: "Vazirmatn", Tahoma, sans-serif;
+
+            background: white;
+
+            color: var(--text);
+
+            line-height: 1.9;
         }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(92%,var(--container));
+            margin: auto;
+        }
+
+        /* HEADER */
 
         header {
-            background: #0f172a;
-            color: white;
-            padding: 20px 8%;
+            position: fixed;
+
+            top: 0;
+            right: 0;
+            left: 0;
+
+            z-index: 1000;
+
+            background: rgba(7,20,38,.88);
+
+            backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid rgba(201,164,92,.18);
+        }
+
+        .navbar {
+            min-height: 82px;
+
             display: flex;
-            justify-content: space-between;
+
             align-items: center;
-        }
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 18px;
-        }
-
-        nav a:hover {
-            color: #f59e0b;
-        }
-
-        .page-header {
-            text-align: center;
-            padding: 70px 20px 40px;
-        }
-
-        .page-header h1 {
-            font-size: 42px;
-        }
-
-        .page-header p {
-            color: #64748b;
-        }
-
-        .contact-container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px 30px 70px;
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(auto-fit, minmax(280px, 1fr));
+            justify-content: space-between;
 
             gap: 30px;
         }
 
-        .contact-card {
-            background: white;
-            padding: 35px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,.08);
+        .brand {
+            display: flex;
+
+            align-items: center;
+
+            gap: 13px;
+
+            white-space: nowrap;
+        }
+
+        .brand-mark {
+            width: 43px;
+            height: 43px;
+
+            display: grid;
+
+            place-items: center;
+
+            border: 1px solid var(--gold);
+
+            color: var(--gold-light);
+
+            font-weight: 900;
+
+            font-size: 18px;
+
+            border-radius: 12px;
+
+            background: rgba(201,164,92,.08);
+        }
+
+        .brand-text strong {
+            display: block;
+
+            color: white;
+
+            font-size: 17px;
+
+            font-weight: 800;
+        }
+
+        .brand-text span {
+            display: block;
+
+            color: #9daabd;
+
+            font-size: 10px;
+
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+        }
+
+        nav a {
+            color: #dfe6ef;
+
+            font-size: 13px;
+
+            font-weight: 500;
+
+            padding: 10px 14px;
+
+            border-radius: 8px;
+
+            transition: .25s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--gold-light);
+
+            background: rgba(201,164,92,.09);
+        }
+
+        .nav-cta {
+            border: 1px solid rgba(201,164,92,.55);
+
+            color: var(--gold-light) !important;
+        }
+
+        /* HERO */
+
+        .page-hero {
+            min-height: 450px;
+
+            display: flex;
+
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(circle at 15% 25%,rgba(201,164,92,.16),transparent 30%),
+                radial-gradient(circle at 85% 80%,rgba(29,73,120,.25),transparent 35%),
+                linear-gradient(125deg,#050e1b,#091a30 55%,#102947);
+        }
+
+        .page-hero::before {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            opacity: .07;
+
+            background-image:
+                linear-gradient(rgba(255,255,255,.8) 1px,transparent 1px),
+                linear-gradient(90deg,rgba(255,255,255,.8) 1px,transparent 1px);
+
+            background-size: 55px 55px;
+
+            transform:
+                perspective(500px)
+                rotateX(55deg)
+                scale(1.5);
+
+            transform-origin: bottom;
+        }
+
+        .hero-content {
+            position: relative;
+
+            z-index: 2;
+
+            padding-top: 80px;
+        }
+
+        .eyebrow {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            color: var(--gold-light);
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            margin-bottom: 20px;
+        }
+
+        .eyebrow::before {
+            content: "";
+
+            width: 38px;
+
+            height: 1px;
+
+            background: var(--gold);
+        }
+
+        .hero-content h1 {
+            color: white;
+
+            font-size: clamp(38px,5vw,65px);
+
+            line-height: 1.35;
+
+            font-weight: 900;
+
+            margin-bottom: 18px;
+        }
+
+        .hero-content h1 span {
+            color: var(--gold-light);
+        }
+
+        .hero-content p {
+            color: #b8c3d2;
+
+            max-width: 650px;
+
+            font-size: 15px;
+
+            line-height: 2.3;
+        }
+
+        .gold-line {
+            height: 3px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    var(--gold),
+                    transparent
+                );
+        }
+
+        /* CONTACT */
+
+        .contact-section {
+            padding: 100px 0;
+
+            background: var(--light);
+        }
+
+        .contact-grid {
+            display: grid;
+
+            grid-template-columns: .9fr 1.1fr;
+
+            gap: 25px;
+
+            align-items: stretch;
+        }
+
+        /* INFO */
+
+        .contact-info {
+            padding: 40px;
+
+            border-radius: 18px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    var(--navy),
+                    var(--navy-3)
+                );
+
+            border: 1px solid rgba(201,164,92,.2);
+
+            box-shadow: 0 25px 60px rgba(7,20,38,.12);
+        }
+
+        .section-label {
+            color: var(--gold-light);
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            margin-bottom: 10px;
+        }
+
+        .contact-info h2 {
+            color: white;
+
+            font-size: 31px;
+
+            line-height: 1.5;
+
+            margin-bottom: 12px;
+        }
+
+        .contact-info > p {
+            color: #9eacbe;
+
+            font-size: 13px;
+
+            line-height: 2.2;
+
+            margin-bottom: 30px;
+        }
+
+        .contact-items {
+            display: grid;
+
+            gap: 12px;
+        }
+
+        .contact-item {
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            padding: 16px;
+
+            border-radius: 11px;
+
+            border: 1px solid rgba(255,255,255,.09);
+
+            background: rgba(255,255,255,.035);
+
+            transition: .25s ease;
+        }
+
+        .contact-item:hover {
+            border-color: rgba(201,164,92,.45);
+
+            transform: translateX(-4px);
         }
 
         .contact-icon {
-            font-size: 45px;
+            width: 45px;
+
+            height: 45px;
+
+            flex-shrink: 0;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 11px;
+
+            background: rgba(201,164,92,.1);
+
+            border: 1px solid rgba(201,164,92,.3);
+
+            color: var(--gold-light);
+
+            font-size: 18px;
+
+            font-weight: 800;
         }
 
-        .contact-card p {
-            color: #64748b;
-            line-height: 2;
+        .contact-item small {
+            display: block;
+
+            color: #7f8da1;
+
+            font-size: 10px;
+
+            margin-bottom: 2px;
         }
 
-        .phone-button,
-        .message-button {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 14px 25px;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 17px;
-            font-weight: bold;
+        .contact-item strong {
+            display: block;
+
+            color: #edf1f5;
+
+            font-size: 13px;
+
+            font-weight: 700;
         }
 
-        .phone-button {
-            background: #16a34a;
+        .contact-item a {
+            color: var(--gold-light);
+
+            font-size: 13px;
+
+            font-weight: 700;
         }
 
-        .message-button {
-            background: #2563eb;
+        .address {
+            align-items: flex-start;
+
+            margin-top: 12px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid rgba(255,255,255,.09);
+
+            color: #aab7c8;
+
+            font-size: 12px;
+
+            line-height: 2.1;
         }
 
-        .company-info {
-            max-width: 1000px;
-            margin: 0 auto 70px;
+        /* FORM */
+
+        .contact-form-box {
+            background: white;
+
             padding: 40px;
-            background: #0f172a;
-            color: white;
-            border-radius: 15px;
+
+            border-radius: 18px;
+
+            border: 1px solid #e5e9ee;
+
+            box-shadow: 0 20px 55px rgba(7,20,38,.07);
+        }
+
+        .form-head {
+            margin-bottom: 30px;
+        }
+
+        .form-head .section-label {
+            color: var(--gold-dark);
+        }
+
+        .form-head h2 {
+            color: var(--navy);
+
+            font-size: 28px;
+
+            margin-bottom: 7px;
+        }
+
+        .form-head p {
+            color: var(--muted);
+
+            font-size: 12px;
+        }
+
+        form {
+            display: grid;
+
+            gap: 17px;
+        }
+
+        .form-row {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 15px;
+        }
+
+        .field {
+            display: grid;
+
+            gap: 7px;
+        }
+
+        .field label {
+            color: var(--navy);
+
+            font-size: 11px;
+
+            font-weight: 800;
+        }
+
+        .field input,
+        .field textarea,
+        .field select {
+            width: 100%;
+
+            border: 1px solid #e0e5ea;
+
+            background: #fbfcfd;
+
+            color: var(--text);
+
+            border-radius: 9px;
+
+            padding: 12px 14px;
+
+            font-family: inherit;
+
+            font-size: 12px;
+
+            outline: none;
+
+            transition: .25s ease;
+        }
+
+        .field input:focus,
+        .field textarea:focus,
+        .field select:focus {
+            border-color: var(--gold);
+
+            background: white;
+
+            box-shadow: 0 0 0 3px rgba(201,164,92,.08);
+        }
+
+        .field textarea {
+            min-height: 145px;
+
+            resize: vertical;
+        }
+
+        .submit-btn {
+            border: none;
+
+            cursor: pointer;
+
+            font-family: inherit;
+
+            margin-top: 5px;
+
+            width: 100%;
+        }
+
+        .btn {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 13px 24px;
+
+            min-height: 47px;
+
+            border-radius: 9px;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            transition: .3s ease;
+        }
+
+        .btn-gold {
+            color: #101a29;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--gold-light),
+                    var(--gold)
+                );
+
+            box-shadow:
+                0 12px 30px rgba(201,164,92,.18);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 18px 35px rgba(201,164,92,.27);
+        }
+
+        /* CHANNELS */
+
+        .channels {
+            padding: 85px 0;
+
+            background: white;
+        }
+
+        .channels-head {
             text-align: center;
+
+            max-width: 650px;
+
+            margin: 0 auto 45px;
         }
 
-        .company-info h2 {
-            color: #f59e0b;
+        .channels-head .section-label {
+            color: var(--gold-dark);
         }
 
-        .company-info p {
-            line-height: 2;
+        .channels-head h2 {
+            color: var(--navy);
+
+            font-size: 32px;
+
+            margin-bottom: 8px;
         }
+
+        .channels-head p {
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+        .channel-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4,1fr);
+
+            gap: 15px;
+        }
+
+        .channel {
+            padding: 28px 20px;
+
+            text-align: center;
+
+            border: 1px solid #e7ebef;
+
+            border-radius: 14px;
+
+            transition: .3s ease;
+
+            background: #fbfcfd;
+        }
+
+        .channel:hover {
+            transform: translateY(-6px);
+
+            border-color: rgba(201,164,92,.45);
+
+            box-shadow:
+                0 20px 45px rgba(7,20,38,.08);
+        }
+
+        .channel-icon {
+            width: 55px;
+
+            height: 55px;
+
+            display: grid;
+
+            place-items: center;
+
+            margin: 0 auto 15px;
+
+            border-radius: 50%;
+
+            background: var(--navy);
+
+            color: var(--gold-light);
+
+            font-weight: 900;
+
+            font-size: 18px;
+        }
+
+        .channel h3 {
+            color: var(--navy);
+
+            font-size: 16px;
+
+            margin-bottom: 5px;
+        }
+
+        .channel p {
+            color: var(--muted);
+
+            font-size: 11px;
+
+            margin-bottom: 10px;
+        }
+
+        .channel a {
+            color: var(--gold-dark);
+
+            font-size: 12px;
+
+            font-weight: 800;
+        }
+
+        /* FOOTER */
 
         footer {
-            background: #0f172a;
-            color: white;
-            text-align: center;
-            padding: 30px;
+            padding: 35px 0;
+
+            background: #040b14;
+
+            color: #7d8998;
+
+            font-size: 11px;
         }
 
-        @media(max-width:700px) {
+        .footer-content {
+            display: flex;
 
-            header {
-                flex-direction: column;
-                gap: 15px;
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+        }
+
+        .footer-brand {
+            color: #c8d0db;
+
+            font-weight: 700;
+        }
+
+        .footer-gold {
+            color: var(--gold);
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:900px) {
+
+            .navbar {
+                min-height: 72px;
             }
 
             nav a {
-                margin: 0 5px;
-                font-size: 13px;
+                padding: 8px 7px;
+
+                font-size: 11px;
             }
 
-            .page-header h1 {
-                font-size: 32px;
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .channel-grid {
+                grid-template-columns: 1fr 1fr;
             }
         }
 
-    </style>
+        @media(max-width:650px) {
 
+            .navbar {
+                flex-direction: column;
+
+                padding: 13px 0;
+
+                gap: 8px;
+            }
+
+            .brand-text span {
+                display: none;
+            }
+
+            nav {
+                width: 100%;
+
+                justify-content: center;
+
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                font-size: 10px;
+
+                padding: 6px 7px;
+            }
+
+            .nav-cta {
+                display: none;
+            }
+
+            .page-hero {
+                min-height: 500px;
+            }
+
+            .hero-content {
+                padding-top: 100px;
+            }
+
+            .contact-section,
+            .channels {
+                padding: 70px 0;
+            }
+
+            .contact-info,
+            .contact-form-box {
+                padding: 27px 20px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .channel-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
 
-    <div class="logo">
-        کسری دژ ارجان
+    <div class="container navbar">
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-mark">
+                ک
+            </div>
+
+            <div class="brand-text">
+                <strong>کسری دژ ارجان</strong>
+                <span>ROAD & CIVIL ENGINEERING</span>
+            </div>
+
+        </a>
+
+        <nav>
+
+            <a href="index.html">
+                خانه
+            </a>
+
+            <a href="about.html">
+                درباره ما
+            </a>
+
+            <a href="projects.html">
+                پروژه‌ها
+            </a>
+
+            <a href="clients.html">
+                همکاران
+            </a>
+
+            <a href="contact.html" class="active">
+                تماس با ما
+            </a>
+
+            <a href="messages.html" class="nav-cta">
+                پیام به اپراتور
+            </a>
+
+        </nav>
+
     </div>
-
-    <nav>
-
-        <a href="index.html">خانه</a>
-
-        <a href="about.html">درباره ما</a>
-
-        <a href="projects.html">پروژه‌ها</a>
-
-        <a href="contact.html">تماس با ما</a>
-
-        <a href="messages.html">💬 پیام به اپراتور</a>
-
-    </nav>
 
 </header>
 
-<section class="page-header">
 
-    <h1>تماس با ما</h1>
+<main>
 
-    <p>
-        برای ارتباط با شرکت کسری دژ ارجان
-        با ما در تماس باشید.
-    </p>
+    <!-- HERO -->
 
-</section>
+    <section class="page-hero">
 
-<section class="contact-container">
+        <div class="container">
 
-    <div class="contact-card">
+            <div class="hero-content">
 
-        <div class="contact-icon">📞</div>
+                <div class="eyebrow">
+                    ارتباط با شرکت
+                </div>
 
-        <h2>تلفن شرکت</h2>
+                <h1>
+                    با ما
+                    <span>در ارتباط باشید.</span>
+                </h1>
 
-        <p>
-            برای تماس مستقیم با شرکت
-            با شماره زیر تماس بگیرید.
-        </p>
+                <p>
+                    برای دریافت اطلاعات بیشتر، همکاری، استعلام پروژه
+                    یا ارسال درخواست، از طریق یکی از راه‌های ارتباطی
+                    زیر با شرکت کسری دژ ارجان در تماس باشید.
+                </p>
 
-        <a
-            class="phone-button"
-            href="tel:09937079274">
+            </div>
 
-            📞 ۰۹۹۳۷۰۷۹۲۷۴
+        </div>
 
-        </a>
+    </section>
 
-    </div>
+    <div class="gold-line"></div>
 
 
-    <div class="contact-card">
+    <!-- CONTACT -->
 
-        <div class="contact-icon">💬</div>
+    <section class="contact-section">
 
-        <h2>پیام به اپراتور</h2>
+        <div class="container">
 
-        <p>
-            اگر می‌خواهید درخواست یا سوالی
-            برای اپراتور ارسال کنید،
-            از بخش پیام‌رسان استفاده کنید.
-        </p>
+            <div class="contact-grid">
 
-        <a
-            class="message-button"
-            href="messages.html">
 
-            ارسال پیام
+                <!-- INFO -->
 
-        </a>
+                <div class="contact-info">
 
-    </div>
+                    <div class="section-label">
+                        اطلاعات ارتباطی
+                    </div>
 
-</section>
+                    <h2>
+                        در کنار شما هستیم.
+                    </h2>
 
-<section class="company-info">
+                    <p>
+                        برای ارتباط سریع با شرکت می‌توانید از
+                        اطلاعات زیر استفاده کنید.
+                    </p>
 
-    <h2>اطلاعات شرکت</h2>
 
-    <p>
-        شرکت کسری دژ ارجان
-    </p>
+                    <div class="contact-items">
 
-    <p>
-        شماره ثبت: ۱۴۳۷
-    </p>
 
-    <p>
-        زمینه فعالیت: راه و ابنیه
-    </p>
+                        <!-- SMS / CALL -->
 
-    <p>
-        مدیرعامل: عدالت علی پور
-    </p>
+                        <div class="contact-item">
 
-</section>
+                            <div class="contact-icon">
+                                ☎
+                            </div>
+
+                            <div>
+
+                                <small>
+                                    پیامک و تماس
+                                </small>
+
+                                <a href="tel:09937079274">
+                                    ۰۹۹۳۷۰۷۹۲۷۴
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- FIXED -->
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+                                ☎
+                            </div>
+
+                            <div>
+
+                                <small>
+                                    تلفن ثابت
+                                </small>
+
+                                <a href="tel:07433336096">
+                                    ۰۷۴۳۳۳۳۶۰۹۶
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- OPERATOR -->
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+                                ✉
+                            </div>
+
+                            <div>
+
+                                <small>
+                                    ارتباط مستقیم
+                                </small>
+
+                                <strong>
+                                    پیام به اپراتور
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="address">
+
+                        <strong>
+                            آدرس شرکت
+                        </strong>
+
+                        <br>
+
+                        استان کهگیلویه و بویراحمد،
+                        یاسوج، شهرک جهاد
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORM -->
+
+                <div class="contact-form-box">
+
+                    <div class="form-head">
+
+                        <div class="section-label">
+                            ارسال درخواست
+                        </div>
+
+                        <h2>
+                            پیام خود را ارسال کنید
+                        </h2>
+
+                        <p>
+                            اطلاعات خود را وارد کنید تا درخواست شما
+                            برای بررسی ارسال شود.
+                        </p>
+
+                    </div>
+
+
+                    <form
+                        action="https://formsubmit.co/"
+                        method="POST"
+                    >
+
+                        <div class="form-row">
+
+                            <div class="field">
+
+                                <label>
+                                    نام و نام خانوادگی
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="نام شما"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    شماره تماس
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    placeholder="۰۹۱۲..."
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                موضوع پیام
+                            </label>
+
+                            <select name="subject">
+
+                                <option>
+                                    همکاری
+                                </option>
+
+                                <option>
+                                    استعلام پروژه
+                                </option>
+
+                                <option>
+                                    پیشنهاد همکاری
+                                </option>
+
+                                <option>
+                                    درخواست اطلاعات
+                                </option>
+
+                                <option>
+                                    سایر
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                متن پیام
+                            </label>
+
+                            <textarea
+                                name="message"
+                                placeholder="پیام خود را اینجا بنویسید..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-gold submit-btn"
+                        >
+                            ارسال پیام
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CHANNELS -->
+
+    <section class="channels">
+
+        <div class="container">
+
+            <div class="channels-head">
+
+                <div class="section-label">
+                    راه‌های ارتباطی
+                </div>
+
+                <h2>
+                    از هر مسیری که راحت‌ترید.
+                </h2>
+
+                <p>
+                    برای ارتباط با شرکت، مسیر مورد نظر خود را انتخاب کنید.
+                </p>
+
+            </div>
+
+
+            <div class="channel-grid">
+
+
+                <!-- OPERATOR -->
+
+                <div class="channel">
+
+                    <div class="channel-icon">
+                        ✉
+                    </div>
+
+                    <h3>
+                        پیام به اپراتور
+                    </h3>
+
+                    <p>
+                        ارسال پیام مستقیم
+                    </p>
+
+                    <a href="messages.html">
+                        ارسال پیام
+                    </a>
+
+                </div>
+
+
+                <!-- EITAA -->
+
+                <div class="channel">
+
+                    <div class="channel-icon">
+                        ا
+                    </div>
+
+                    <h3>
+                        ایتا
+                    </h3>
+
+                    <p>
+                        ارتباط از طریق ایتا
+                    </p>
+
+                    <a href="#">
+                        ورود به ایتا
+                    </a>
+
+                </div>
+
+
+                <!-- BALE -->
+
+                <div class="channel">
+
+                    <div class="channel-icon">
+                        ب
+                    </div>
+
+                    <h3>
+                        بله
+                    </h3>
+
+                    <p>
+                        ارتباط از طریق بله
+                    </p>
+
+                    <a href="#">
+                        ورود به بله
+                    </a>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="channel">
+
+                    <div class="channel-icon">
+                        ☎
+                    </div>
+
+                    <h3>
+                        تماس و پیامک
+                    </h3>
+
+                    <p>
+                        ۰۹۹۳۷۰۷۹۲۷۴
+                    </p>
+
+                    <a href="tel:09937079274">
+                        تماس با شرکت
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
 
 <footer>
 
-    <p>
-        © ۱۴۰۵ شرکت کسری دژ ارجان
-    </p>
+    <div class="container footer-content">
+
+        <div class="footer-brand">
+            شرکت کسری دژ ارجان
+        </div>
+
+        <div>
+            © ۱۴۰۵ — تمامی حقوق محفوظ است
+        </div>
+
+        <div>
+            راه و ابنیه |
+            <span class="footer-gold">
+                با اعتبار، برای آینده
+            </span>
+        </div>
+
+    </div>
 
 </footer>
 
 </body>
 </html>
+```
